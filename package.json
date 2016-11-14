@@ -3,10 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build-ios": "react-native bundle --platform ios --entry-file index.ios.js  --bundle-output ./bundles/iOS/main.jsbundle --assets-dest ./bundles/iOS --dev false",
+    "build-android": "react-native bundle --platform android --entry-file index.android.js  --bundle-output ./bundles/android/main.jsbundle --assets-dest ./bundles/android --dev false",
+    "release-ios": "code-push release-react MSBU-Tech-ios ios",
+    "release-android": "code-push release-react MSBU-Tech-android android"
   },
   "dependencies": {
     "react": "15.3.2",
-    "react-native": "^0.37.0"
+    "react-native": "^0.37.0",
+    "react-native-code-push": "^1.15.1-beta",
+    "react-native-scrollable-tab-view": "^0.6.0"
   }
 }

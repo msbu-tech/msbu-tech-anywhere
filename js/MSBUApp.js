@@ -8,72 +8,43 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  TabBarIOS,
   Text,
-  View
+  View,
 } from 'react-native';
+import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
-import AboutTab from './tabs/AboutTab';
-import HomeTab from './tabs/HomeTab';
-import MoreTab from './tabs/MoreTab';
-import WeeklyTab from './tabs/WeeklyTab';
+
+import HomePage from './pages/HomePage';
+import WeeklyPage from './pages/WeeklyPage';
+import MorePage from './pages/MorePage';
+import AboutPage from './pages/AboutPage';
 
 class MSBUApp extends React.Component {
-  state = {
-    selectedTab: 'homeTab',
-  };
 
   render() {
     return (
-      <TabBarIOS
-        title="MSBU Tech Anywhere"
-        unselectedTintColor="white"
-        tintColor="#06c"
-        barTintColor="black">
-        <TabBarIOS.Item
-          title="Home"
-          selected={this.state.selectedTab === 'homeTab'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'homeTab',
-            });
-          }}>
-          <HomeTab />
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          title="Weekly"
-          selected={this.state.selectedTab === 'weeklyTab'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'weeklyTab',
-            });
-          }}>
-          <WeeklyTab />
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          title="More"
-          systemIcon="more"
-          selected={this.state.selectedTab === 'moreTab'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'moreTab',
-            });
-          }}>
-          <MoreTab />
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          title="About"
-          selected={this.state.selectedTab === 'aboutTab'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'aboutTab',
-            });
-          }}>
-          <AboutTab />
-        </TabBarIOS.Item>
-      </TabBarIOS>
+      <ScrollableTabView
+        style={styles.container}
+        tabBarPosition={'bottom'}
+        renderTabBar={() => <DefaultTabBar />}
+        tabBarBackgroundColor={'#F7F8FA'}
+        tabBarTextStyle={{color: '#393C40', fontSize: 16}}
+        tabBarActiveTextColor={'#4A90E2'}
+        tabBarInactiveTextColor={'#4A90E2'}
+        scrollWithoutAnimation={true}
+      >
+        <HomePage tabLabel="Home"/>
+        <WeeklyPage tabLabel="Weekly"/>
+        <MorePage tabLabel="More"/>
+        <AboutPage tabLabel="About"/>
+      </ScrollableTabView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+  }
+});
 
 module.exports = MSBUApp;
