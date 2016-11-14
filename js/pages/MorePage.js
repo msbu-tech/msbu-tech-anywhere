@@ -17,16 +17,11 @@ class MorePage extends React.Component {
   	return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Blog
+          Under Construction
         </Text>
+
         <Text style={styles.instructions}>
-          Welcome!
-        </Text>
-        <Text style={styles.welcome}>
-          Share
-        </Text>
-        <Text style={styles.instructions}>
-          Welcome!
+          🚧
         </Text>
       </View>
     );

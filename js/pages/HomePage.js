@@ -20,7 +20,7 @@ class HomePage extends React.Component {
           MSBU Tech Anywhere
         </Text>
         <Text style={styles.instructions}>
-          Welcome!
+          More than this.
         </Text>
       </View>
     );
@@ -30,7 +30,7 @@ class HomePage extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#FFF',
   },
@@ -38,10 +38,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 50,
+    color: '#393C40'
   },
   instructions: {
+    fontSize: 15,
     textAlign: 'center',
-    color: '#333333',
+    color: '#B4B8BF',
     marginBottom: 5,
   },
 });

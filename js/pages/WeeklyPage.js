@@ -9,46 +9,69 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  ListView,
+  Dimensions
 } from 'react-native';
 
-import {getWeeklyList} from '../actions/weekly';
+import { getWeeklyList } from '../actions/weekly';
+
+const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class WeeklyPage extends React.Component {
   constructor(props) {
     super(props);
+
+
     this.state = {
       loading: true,
-      weeklyList: []
+      weeklyList: [],
     };
   }
 
   componentDidMount() {
-    // this._fetch();
+    this._fetch();
   }
 
   _fetch() {
     getWeeklyList().then((responseData) => {
+
       this.setState({
         loading: false,
-        weeklyList: responseData
-      })
-      .done();
-    });
+        weeklyList: ds.cloneWithRows(responseData.weekly)
+      });
+
+    }).done();
   }
 
   onButtonPress() {
     Alert.alert('Button has been pressed!');
   }
 
+  _renderRow(rowData) {
+    return (
+      <View key={rowData.id}>
+        <Text style={styles.date}>{rowData.date}</Text>
+        {
+          rowData.articles.map((article) => (
+            <View key={article.link}>
+              <Text style={styles.title}>{article.id}. {article.title}</Text>
+            </View>
+          ))
+        }
+      </View>
+    );
+  }
+
   render() {
     if (this.state.loading) {
       return (
         <View style={styles.container}>
-          <Text style={styles.title}>
+          <Text style={styles.pageTitle}>
             MSBU Tech Weekly
           </Text>
-          <Text style={styles.weeklyTitle}>
+          <Text style={styles.loading}>
             Loading...
           </Text>
         </View>
@@ -57,14 +80,14 @@ class WeeklyPage extends React.Component {
     else {
       return (
         <View style={styles.container}>
-          <Text style={styles.title}>
+          <Text style={styles.pageTitle}>
             MSBU Tech Weekly
           </Text>
-          {this.state.weeklyList.map((item) => (
-          <Text style={styles.weeklyTitle}>
-            {item.title} {item.date.split(' ')[0]}
-          </Text>
-          ))}
+          <ListView
+            style={styles.listView}
+            dataSource={this.state.weeklyList}
+            renderRow={this._renderRow.bind(this)}
+          />
         </View>
       );
     }
@@ -76,16 +99,27 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    backgroundColor: '#FFF',
-    padding: 10,
+    backgroundColor: '#FFF'
+  },
+  date: {
+    fontSize: 20,
+    alignSelf: 'flex-end',
+    paddingRight: 20
+  },
+  pageTitle: {
+    marginTop: 20,
+    marginBottom: 10,
+    alignSelf: 'center'
   },
   title: {
-    fontSize: 20,
-    marginTop: 50,
-    marginBottom: 20,
+    fontSize: 15,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20
   },
   weeklyTitle: {
-    color: '#333333',
+    color: '#393C40',
     marginBottom: 5,
   },
   weeklyUrl: {
@@ -93,6 +127,13 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  listView: {
+    width: SCREEN_WIDTH
+  },
+  loading: {
+    alignSelf: 'center',
+    marginTop: 200
+  }
 });
 
 module.exports = WeeklyPage;

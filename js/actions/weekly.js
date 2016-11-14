@@ -6,8 +6,10 @@
 'use strict';
 
 function getWeeklyList() {
-  return fetch('http://127.0.0.1:4000/weekly/index.json')
-    .then((response) => response.json());
+  return fetch('https://msbu-tech.github.io/api/weekly.json')
+    .then((response) => {
+      return response.json()
+    });
 }
 
 module.exports = {getWeeklyList};
