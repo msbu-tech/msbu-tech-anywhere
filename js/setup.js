@@ -5,28 +5,28 @@
 
 'use strict';
 
-import React from 'react'
-import MSBUApp from './MSBUApp';
+import React, { Component } from 'react'
+import {
+  Navigator
+} from 'react-native';
+import MSBUApp from './containers/MSBUApp';
 import CodePush from "react-native-code-push";
 
-function setup(): ReactClass<{}> {
-  class Root extends React.Component {
+export default class Root extends Component {
 
   componentDidMount() {
-    // CodePush.sync();
-    // CodePush.sync({ updateDialog: { title: "An update is available!" }, installMode: CodePush.InstallMode.IMMEDIATE });
-    CodePush.sync({ updateDialog: { title: "An update is available!" } });
-
+    CodePush.sync({updateDialog: {title: "An update is available!"}});
   }
 
   render() {
-      return (
-        <MSBUApp />
-      );
-    }
+    return (
+      <Navigator
+        initialRoute={{name: 'MSBUApp', index: 0}}
+        renderScene={(route, navigator) =>
+          <MSBUApp {...route.params} navigator={navigator}/>
+        }
+      >
+      </Navigator>
+    );
   }
-
-  return Root;
 }
-
-module.exports = setup;

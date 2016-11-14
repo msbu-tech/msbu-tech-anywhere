@@ -13,11 +13,10 @@ import {
 } from 'react-native';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
-
-import HomePage from './pages/HomePage';
-import WeeklyPage from './pages/WeeklyPage';
-import MorePage from './pages/MorePage';
-import AboutPage from './pages/AboutPage';
+import HomePage from '../pages/HomePage';
+import WeeklyPage from '../pages/WeeklyPage';
+import MorePage from '../pages/MorePage';
+import AboutPage from '../pages/AboutPage';
 
 class MSBUApp extends React.Component {
 

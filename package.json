@@ -6,8 +6,10 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "build-ios": "react-native bundle --platform ios --entry-file index.ios.js  --bundle-output ./bundles/iOS/main.jsbundle --assets-dest ./bundles/iOS --dev false",
     "build-android": "react-native bundle --platform android --entry-file index.android.js  --bundle-output ./bundles/android/main.jsbundle --assets-dest ./bundles/android --dev false",
-    "release-ios": "code-push release-react MSBU-Tech-ios ios",
-    "release-android": "code-push release-react MSBU-Tech-android android"
+    "release-ios": "code-push promote MSBU-Tech-ios Staging Production",
+    "release-android": "code-push promote release-react MSBU-Tech-android Staging Production",
+    "preview-ios": "code-push release-react MSBU-Tech-ios ios",
+    "preview-android": "code-push release-react MSBU-Tech-android android"
   },
   "dependencies": {
     "react": "15.3.2",

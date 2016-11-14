@@ -5,6 +5,6 @@
  */
 
 import { AppRegistry } from 'react-native';
-import setup from './js/setup';
+import Setup from './js/setup';
 
-AppRegistry.registerComponent('msbu', setup);
+AppRegistry.registerComponent('msbu', () => Setup);
