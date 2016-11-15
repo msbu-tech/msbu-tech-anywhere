@@ -1,10 +1,8 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Copyright (c) 2016 MSBU Tech. All Rights Reserved.
+ * This program is distributed under MIT License.
  */
 
-import { AppRegistry } from 'react-native';
-import Setup from './js/setup';
+'use strict';
 
-AppRegistry.registerComponent('msbu', () => Setup);
+import App from './js/setup';

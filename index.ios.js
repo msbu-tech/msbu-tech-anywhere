@@ -5,7 +5,4 @@
 
 'use strict';
 
-import { AppRegistry } from 'react-native';
-import Setup from './js/setup';
-
-AppRegistry.registerComponent('msbu', () => Setup);
+import App from './js/setup';
