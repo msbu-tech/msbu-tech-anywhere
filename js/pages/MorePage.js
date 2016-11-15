@@ -14,7 +14,7 @@ import {
 
 class MorePage extends React.Component {
   render() {
-  	return (
+    return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Under Construction
@@ -39,10 +39,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 50,
+    color: '#505359'
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#505359',
     marginBottom: 5,
   },
 });

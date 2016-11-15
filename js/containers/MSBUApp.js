@@ -25,11 +25,12 @@ class MSBUApp extends React.Component {
       <ScrollableTabView
         style={styles.container}
         tabBarPosition={'bottom'}
-        renderTabBar={() => <DefaultTabBar />}
-        tabBarBackgroundColor={'#F7F8FA'}
-        tabBarTextStyle={{color: '#393C40', fontSize: 16}}
-        tabBarActiveTextColor={'#4A90E2'}
-        tabBarInactiveTextColor={'#4A90E2'}
+        renderTabBar={() => <DefaultTabBar backgroundColor={'#F7F8FA'}
+                                           tabBarTextStyle={{color: '#393C40', fontSize: 16}}
+                                           activeTextColor={'#4A90E2'}
+                                           inactiveTextColor={'#393c40'}
+                                           underlineStyle={{backgroundColor: '#4A90E2'}}/>
+        }
         scrollWithoutAnimation={true}
       >
         <HomePage tabLabel="Home"/>
@@ -42,8 +43,7 @@ class MSBUApp extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-  }
+  container: {}
 });
 
 module.exports = MSBUApp;

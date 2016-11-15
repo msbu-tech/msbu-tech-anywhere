@@ -38,13 +38,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 50,
-    color: '#393C40'
+    color: '#505359',
+    lineHeight: 25
   },
   instructions: {
     fontSize: 15,
     textAlign: 'center',
-    color: '#B4B8BF',
+    color: '#81858c',
     marginBottom: 5,
+    lineHeight: 20
   },
 });
 
