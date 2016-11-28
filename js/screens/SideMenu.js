@@ -15,34 +15,21 @@ export default class SideMenu extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Side Menu</Text>
-
-        <TouchableOpacity onPress={ this.onReplaceTab2Press.bind(this) }>
-          <Text style={styles.button}>Replace Tab#2 Root</Text>
-        </TouchableOpacity>
+        <Text style={styles.title}>Connect to us.</Text>
 
         <TouchableOpacity onPress={ this.onModalPress.bind(this) }>
-          <Text style={styles.button}>Show Modal Screen</Text>
+          <Text style={styles.button}>GitHub@MSBU-Tech</Text>
         </TouchableOpacity>
       </View>
     );
   }
-  onReplaceTab2Press() {
-    this._toggleDrawer();
-    // push/pop navigator actions affect the navigation stack of the current screen only.
-    // since side menu actions are normally directed at sibling tabs, push/pop will
-    // not help us. the recommended alternative is to use deep links for this purpose
-    this.props.navigator.handleDeepLink({
-      link: "tab2/example.PushedScreen"
-    });
-  }
 
   onModalPress() {
     this._toggleDrawer();
-    this.props.navigator.showModal({
-      title: "Modal",
-      screen: "example.ModalScreen"
-    });
+    // this.props.navigator.showModal({
+    //   title: "Modal",
+    //   screen: "example.ModalScreen"
+    // });
   }
 
   _toggleDrawer() {

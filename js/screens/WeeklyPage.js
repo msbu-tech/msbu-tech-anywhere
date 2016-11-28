@@ -13,8 +13,8 @@ import {
   ListView,
   Dimensions
 } from 'react-native';
-
 import { getWeeklyList } from '../actions/weekly';
+import ArticleItem from '../components/ArticleItem';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -45,19 +45,15 @@ class WeeklyPage extends React.Component {
     }).done();
   }
 
-  onButtonPress() {
-    Alert.alert('Button has been pressed!');
-  }
-
-  _renderRow(rowData) {
+  _renderRow(rowData, sectionID, rowID) {
     return (
       <View key={rowData.id}>
-        <Text style={styles.date}>{rowData.date}</Text>
+        <View style={[styles.cardHeader, rowID == 0 ? {borderTopWidth: 0} : {}]}>
+          <Text style={styles.date}>{rowData.date}</Text>
+        </View>
         {
           rowData.articles.map((article) => (
-            <View key={article.link}>
-              <Text style={styles.title}>{article.id}. {article.title}</Text>
-            </View>
+            <ArticleItem key={article.link} data={article}/>
           ))
         }
       </View>
@@ -65,32 +61,30 @@ class WeeklyPage extends React.Component {
   }
 
   render() {
+
+    let content = null;
+
     if (this.state.loading) {
-      return (
-        <View style={styles.container}>
-          <Text style={styles.pageTitle}>
-            MSBU Tech Weekly
-          </Text>
-          <Text style={styles.loading}>
-            Loading...
-          </Text>
-        </View>
+      content = (
+        <Text style={styles.loading}>
+          Loading...
+        </Text>
+      );
+    } else {
+      content = (
+        <ListView
+          style={styles.listView}
+          dataSource={this.state.weeklyList}
+          renderRow={this._renderRow.bind(this)}
+        />
       );
     }
-    else {
-      return (
-        <View style={styles.container}>
-          <Text style={styles.pageTitle}>
-            MSBU Tech Weekly
-          </Text>
-          <ListView
-            style={styles.listView}
-            dataSource={this.state.weeklyList}
-            renderRow={this._renderRow.bind(this)}
-          />
-        </View>
-      );
-    }
+
+    return (
+      <View style={styles.container}>
+        {content}
+      </View>
+    );
   }
 }
 
@@ -101,22 +95,19 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     backgroundColor: '#FFF'
   },
+  cardHeader: {
+    borderTopWidth: 10,
+    borderTopColor: '#F0F1F2',
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#F0F1F2'
+  },
   date: {
-    fontSize: 20,
-    alignSelf: 'flex-end',
-    paddingRight: 20
-  },
-  pageTitle: {
-    marginTop: 20,
-    marginBottom: 10,
-    alignSelf: 'center'
-  },
-  title: {
-    fontSize: 15,
+    fontSize: 18,
+    alignSelf: 'center',
+    paddingRight: 20,
     marginTop: 10,
     marginBottom: 10,
-    paddingLeft: 20,
-    paddingRight: 20
+    color: '#505359'
   },
   weeklyTitle: {
     color: '#393C40',
@@ -131,8 +122,10 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH
   },
   loading: {
+    fontSize: 18,
     alignSelf: 'center',
-    marginTop: 200
+    marginTop: 200,
+    color: '#505359'
   }
 });
 

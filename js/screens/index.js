@@ -7,9 +7,9 @@ import MorePage from './MorePage';
 import AboutPage from './AboutPage';
 
 export function registerScreens() {
-  Navigation.registerComponent('example.HomePage', () => HomePage);
-  Navigation.registerComponent('example.WeeklyPage', () => WeeklyPage);
-  Navigation.registerComponent('example.MorePage', () => MorePage);
-  Navigation.registerComponent('example.AboutPage', () => AboutPage);
-  Navigation.registerComponent('example.SideMenu', () => SideMenu);
+  Navigation.registerComponent('msbu.HomePage', () => HomePage);
+  Navigation.registerComponent('msbu.WeeklyPage', () => WeeklyPage);
+  Navigation.registerComponent('msbu.MorePage', () => MorePage);
+  Navigation.registerComponent('msbu.AboutPage', () => AboutPage);
+  Navigation.registerComponent('msbu.SideMenu', () => SideMenu);
 }

@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   },
   copyright: {
     textAlign: 'center',
-    color: '#B4B8BF',
+    color: '#81858c',
     marginBottom: 20
   },
   logo: {

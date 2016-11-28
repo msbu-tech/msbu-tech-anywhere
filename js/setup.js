@@ -5,6 +5,7 @@
 
 'use strict';
 
+import React from 'react';
 import { Platform } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 
@@ -15,39 +16,42 @@ const createTabs = () => {
   let tabs = [
     {
       label: 'Home',
-      screen: 'example.HomePage',
-      icon: require('../img/one.png'),
-      selectedIcon: require('../img/one_selected.png'),
-      title: 'Home'
+      screen: 'msbu.HomePage',
+      icon: require('./assets/img/one.png'),
+      selectedIcon: require('./assets/img/one_selected.png'),
+      title: 'Home',
+      navigatorStyle: {
+        tabBarBackgroundColor: '#F7F8FA',
+      }
     },
     {
       label: 'Weekly',
-      screen: 'example.WeeklyPage',
-      icon: require('../img/two.png'),
-      selectedIcon: require('../img/two_selected.png'),
+      screen: 'msbu.WeeklyPage',
+      icon: require('./assets/img/two.png'),
+      selectedIcon: require('./assets/img/two_selected.png'),
       title: 'Weekly',
       navigatorStyle: {
-        tabBarBackgroundColor: '#4dbce9',
+        tabBarBackgroundColor: '#F7F8FA',
       }
     },
     {
       label: 'More',
-      screen: 'example.MorePage',
-      icon: require('../img/two.png'),
-      selectedIcon: require('../img/two_selected.png'),
+      screen: 'msbu.MorePage',
+      icon: require('./assets/img/three.png'),
+      selectedIcon: require('./assets/img/three_selected.png'),
       title: 'More',
       navigatorStyle: {
-        tabBarBackgroundColor: '#4dbce9',
+        tabBarBackgroundColor: '#F7F8FA',
       }
     },
     {
       label: 'About',
-      screen: 'example.AboutPage',
-      icon: require('../img/two.png'),
-      selectedIcon: require('../img/two_selected.png'),
+      screen: 'msbu.AboutPage',
+      icon: require('./assets/img/two.png'),
+      selectedIcon: require('./assets/img/two_selected.png'),
       title: 'About',
       navigatorStyle: {
-        tabBarBackgroundColor: '#4dbce9',
+        tabBarBackgroundColor: '#F7F8FA',
       }
     }
   ];
@@ -57,13 +61,13 @@ const createTabs = () => {
 Navigation.startTabBasedApp({
   tabs: createTabs(),
   appStyle: {
-    tabBarBackgroundColor: '#0f2362',
-    tabBarButtonColor: '#ffffff',
-    tabBarSelectedButtonColor: '#63d7cc'
+    tabBarBackgroundColor: '#F7F8FA',
+    tabBarButtonColor: '#B4B8BF',
+    tabBarSelectedButtonColor: '#4A90E2'
   },
   drawer: {
     left: {
-      screen: 'example.SideMenu'
+      screen: 'msbu.SideMenu'
     }
   }
 });
