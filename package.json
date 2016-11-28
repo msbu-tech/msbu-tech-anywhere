@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "build-ios": "react-native bundle --platform ios --entry-file index.ios.js  --bundle-output ./bundles/iOS/main.jsbundle --assets-dest ./bundles/iOS --dev false",
-    "build-android": "react-native bundle --platform android --entry-file index.android.js  --bundle-output ./bundles/android/main.jsbundle --assets-dest ./bundles/android --dev false",
+    "build-ios": "react-native bundle --platform ios --entry-file index.ios.js  --bundle-output ./bundles/iOS/index.ios.bundle --assets-dest ./bundles/iOS --dev false",
+    "build-android": "react-native bundle --platform android --entry-file index.android.js  --bundle-output ./bundles/android/index.android.bundle --assets-dest ./bundles/android --dev false",
     "release-ios": "code-push promote MSBU-Tech-ios Staging Production",
     "release-android": "code-push promote release-react MSBU-Tech-android Staging Production",
     "preview-ios": "code-push release-react MSBU-Tech-ios ios",
@@ -16,7 +16,6 @@
     "react-native": "^0.37.0",
     "react-native-code-push": "^1.15.1-beta",
     "react-native-navigation": "^2.0.0-experimental.141",
-    "react-native-scrollable-tab-view": "^0.6.0",
     "react-native-vector-icons": "^3.0.0"
   }
 }

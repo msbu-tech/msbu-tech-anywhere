@@ -65,9 +65,9 @@ import com.android.build.OutputFile
  * ]
  */
 
-apply from: "../../node_modules/react-native/react.gradle"
 apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+apply from: "../../node_modules/react-native/react.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -87,10 +87,10 @@ def enableProguardInReleaseBuilds = false
 android {
     signingConfigs {
         release {
-            keyAlias 'MSBU-Tech'
-            keyPassword '123456'
-            storeFile file('../keystores/MSBU-Tech.jks')
-            storePassword '123456'
+            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storePassword MYAPP_RELEASE_STORE_PASSWORD
         }
     }
     compileSdkVersion 23
@@ -141,13 +141,12 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-vector-icons')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.facebook.react:react-native:+'
-    // From node_modules
     compile project(':react-native-code-push')
     compile project(':react-native-navigation')
+    compile project(':react-native-vector-icons')
 }
 
 // Run this once to be able to run the application with BUCK
