@@ -13,6 +13,29 @@ import {
 } from 'react-native';
 
 class MorePage extends React.Component {
+
+  static navigatorButtons = {
+    leftButtons: [{
+      icon: require('../assets/img/navicon_menu.png'),
+      id: 'menu'
+    }]
+  };
+
+  constructor(props) {
+    super(props);
+    // if you want to listen on navigator events, set this up
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+  }
+
+  onNavigatorEvent(event) {
+    if (event.id === 'menu') {
+      this.props.navigator.toggleDrawer({
+        side: 'left',
+        animated: true
+      });
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>

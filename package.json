@@ -16,6 +16,7 @@
     "react-native": "^0.37.0",
     "react-native-code-push": "^1.15.1-beta",
     "react-native-navigation": "^2.0.0-experimental.141",
-    "react-native-scrollable-tab-view": "^0.6.0"
+    "react-native-scrollable-tab-view": "^0.6.0",
+    "react-native-vector-icons": "^3.0.0"
   }
 }

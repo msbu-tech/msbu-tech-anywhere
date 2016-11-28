@@ -9,12 +9,37 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Alert
 } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 
 class HomePage extends React.Component {
+
+  static navigatorButtons = {
+    leftButtons: [{
+      icon: require('../assets/img/navicon_menu.png'),
+      id: 'menu'
+    }]
+  };
+
+  constructor(props) {
+    super(props);
+    // if you want to listen on navigator events, set this up
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+  }
+
+  onNavigatorEvent(event) {
+    if (event.id === 'menu') {
+      this.props.navigator.toggleDrawer({
+        side: 'left',
+        animated: true
+      });
+    }
+  }
+
   render() {
-  	return (
+    return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           MSBU Tech Anywhere

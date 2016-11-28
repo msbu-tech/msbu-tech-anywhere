@@ -8,17 +8,24 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { Navigation } from 'react-native-navigation';
+import { iconsMap, iconsLoaded } from './assets/appicons';
+import codePush from "react-native-code-push";
 
 import { registerScreens } from './screens';
 registerScreens();
+
+iconsLoaded.then(() => {
+  codePush.sync({updateDialog: {title: "An update is available!"}});
+  startApp();
+});
 
 const createTabs = () => {
   let tabs = [
     {
       label: 'Home',
       screen: 'msbu.HomePage',
-      icon: require('./assets/img/one.png'),
-      selectedIcon: require('./assets/img/one_selected.png'),
+      icon: iconsMap['ios-home'],
+      selectedIcon: iconsMap['ios-home-outline'],
       title: 'Home',
       navigatorStyle: {
         tabBarBackgroundColor: '#F7F8FA',
@@ -27,8 +34,8 @@ const createTabs = () => {
     {
       label: 'Weekly',
       screen: 'msbu.WeeklyPage',
-      icon: require('./assets/img/two.png'),
-      selectedIcon: require('./assets/img/two_selected.png'),
+      icon: iconsMap['ios-paper'],
+      selectedIcon: iconsMap['ios-paper-outline'],
       title: 'Weekly',
       navigatorStyle: {
         tabBarBackgroundColor: '#F7F8FA',
@@ -37,8 +44,8 @@ const createTabs = () => {
     {
       label: 'More',
       screen: 'msbu.MorePage',
-      icon: require('./assets/img/three.png'),
-      selectedIcon: require('./assets/img/three_selected.png'),
+      icon: iconsMap['ios-albums'],
+      selectedIcon: iconsMap['ios-albums-outline'],
       title: 'More',
       navigatorStyle: {
         tabBarBackgroundColor: '#F7F8FA',
@@ -47,8 +54,8 @@ const createTabs = () => {
     {
       label: 'About',
       screen: 'msbu.AboutPage',
-      icon: require('./assets/img/two.png'),
-      selectedIcon: require('./assets/img/two_selected.png'),
+      icon: iconsMap['ios-person'],
+      selectedIcon: iconsMap['ios-person-outline'],
       title: 'About',
       navigatorStyle: {
         tabBarBackgroundColor: '#F7F8FA',
@@ -58,16 +65,18 @@ const createTabs = () => {
   return tabs;
 };
 
-Navigation.startTabBasedApp({
-  tabs: createTabs(),
-  appStyle: {
-    tabBarBackgroundColor: '#F7F8FA',
-    tabBarButtonColor: '#B4B8BF',
-    tabBarSelectedButtonColor: '#4A90E2'
-  },
-  drawer: {
-    left: {
-      screen: 'msbu.SideMenu'
+function startApp() {
+  Navigation.startTabBasedApp({
+    tabs: createTabs(),
+    appStyle: {
+      tabBarBackgroundColor: '#F7F8FA',
+      tabBarButtonColor: '#B4B8BF',
+      tabBarSelectedButtonColor: '#4A90E2'
+    },
+    drawer: {
+      left: {
+        screen: 'msbu.SideMenu'
+      }
     }
-  }
-});
+  });
+}

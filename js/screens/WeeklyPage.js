@@ -23,11 +23,27 @@ class WeeklyPage extends React.Component {
   constructor(props) {
     super(props);
 
-
     this.state = {
       loading: true,
       weeklyList: [],
     };
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+  }
+
+  static navigatorButtons = {
+    leftButtons: [{
+      icon: require('../assets/img/navicon_menu.png'),
+      id: 'menu'
+    }]
+  };
+
+  onNavigatorEvent(event) {
+    if (event.id === 'menu') {
+      this.props.navigator.toggleDrawer({
+        side: 'left',
+        animated: true
+      });
+    }
   }
 
   componentDidMount() {

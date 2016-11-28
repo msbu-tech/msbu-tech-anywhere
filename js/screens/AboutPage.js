@@ -22,12 +22,30 @@ const EASTER_EGGS_ALERT_MESSAGE = "YOU GOT A EASTER EGG!!!";
 const EASTER_EGGS_TRIGGER_DEFAULT_COUNT = 7;
 
 class AboutPage extends React.Component {
+
+  static navigatorButtons = {
+    leftButtons: [{
+      icon: require('../assets/img/navicon_menu.png'),
+      id: 'menu'
+    }]
+  };
+
+  onNavigatorEvent(event) {
+    if (event.id === 'menu') {
+      this.props.navigator.toggleDrawer({
+        side: 'left',
+        animated: true
+      });
+    }
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       clickCount: 0,
       gotEasterEggs: false
     };
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
   }
 
   componentDidMount() {
