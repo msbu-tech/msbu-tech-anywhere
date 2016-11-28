@@ -29,6 +29,7 @@ project.xcworkspace
 .gradle
 local.properties
 *.apk
+build
 
 # node.js
 #
@@ -39,4 +40,6 @@ npm-debug.log
 buck-out/
 \.buckd/
 android/app/libs
-android/keystores/debug.keystore
+keystores
+.gradletasknamecache
+bundles
