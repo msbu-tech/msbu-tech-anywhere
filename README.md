@@ -12,6 +12,6 @@
 
 ### Application download
 #### Android
-[Download](www.baidu.com)
+[Download](https://github.com/msbu-tech/msbu-tech-anywhere/releases/download/v1.0.0/msbu-tech-release.apk)
 #### iOS
 > make by your self.
