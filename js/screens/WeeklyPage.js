@@ -69,7 +69,7 @@ class WeeklyPage extends React.Component {
         </View>
         {
           rowData.articles.map((article) => (
-            <ArticleItem key={article.link} data={article}/>
+            <ArticleItem {...this.props} key={article.link} data={article} />
           ))
         }
       </View>

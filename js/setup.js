@@ -76,7 +76,8 @@ function startApp() {
     drawer: {
       left: {
         screen: 'msbu.SideMenu'
-      }
+      },
+      disableOpenGesture: false
     }
   });
 }

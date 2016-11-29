@@ -26,10 +26,13 @@ export default class SideMenu extends Component {
 
   onModalPress() {
     this._toggleDrawer();
-    // this.props.navigator.showModal({
-    //   title: "Modal",
-    //   screen: "example.ModalScreen"
-    // });
+    this.props.navigator.showModal({
+      screen: "msbu.WebViewPage",
+      title: "Connect to us.",
+      passProps: {
+        link: 'https://msbu-tech.github.io/about/'
+      }
+    });
   }
 
   _toggleDrawer() {

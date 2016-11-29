@@ -50,8 +50,6 @@ class AboutPage extends React.Component {
 
   componentDidMount() {
     AsyncStorage.getItem(CLICK_HISTORY_RECORD, (err, result) => {
-      console.log(err)
-      console.log(result)
       if (!err && result) {
         this.setState({
           gotEasterEggs: true

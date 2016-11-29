@@ -11,7 +11,8 @@ import {
   Text,
   View,
   ListView,
-  Dimensions
+  Dimensions,
+  TouchableHighlight
 } from 'react-native';
 import TagItem from './TagItem';
 
@@ -23,21 +24,35 @@ class ArticleItem extends React.Component {
   componentDidMount() {
   }
 
+  _handlePress(article) {
+    this.props.navigator.showModal({
+      screen: "msbu.WebViewPage",
+      title: article.title,
+      passProps: article
+    });
+  }
+
   render() {
     const article = this.props.data;
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>{article.title}</Text>
-        <Text style={styles.comment} numberOfLines={3}>{article.comment}</Text>
-        <View style={styles.tagContainer}>
-          {
-            article.tags.map((tag, index) => (
-              <TagItem key={index + tag} data={"#" + tag}/>
-            ))
-          }
+      <TouchableHighlight
+        onPress={this._handlePress.bind(this, article)}
+        activeOpacity={0.65}
+        underlayColor={"#bbb"}>
+        <View
+          style={styles.container}>
+          <Text style={styles.title}>{article.title}</Text>
+          <Text style={styles.comment} numberOfLines={3}>{article.comment}</Text>
+          <View style={styles.tagContainer}>
+            {
+              article.tags.map((tag, index) => (
+                <TagItem key={index + tag} data={"#" + tag}/>
+              ))
+            }
+          </View>
         </View>
-      </View>
+      </TouchableHighlight>
     )
   }
 }

@@ -19,7 +19,10 @@ const icons = {
   "ios-albums-outline": [30, "#fff"],
 
   "ios-person": [30, "#bbb"],
-  "ios-person-outline": [30, "#fff"]
+  "ios-person-outline": [30, "#fff"],
+
+  "ios-arrow-back": [30, "#bbb"],
+  "ios-arrow-back-outline": [30, "#fff"],
 
   // Use other Icon provider, see the logic at L39
   // "facebook": [30, "#bbb", FontAwesome],
