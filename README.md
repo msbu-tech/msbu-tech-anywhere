@@ -2,9 +2,16 @@
 
 (WIP) Official app for MSBU Tech. Powered by React Native.
 
-## Tabs
+## Release 1.0
 
-* Home
-* Weekly
-* More/Discover
-* About
+### Features
+- home
+- weekly
+- more
+- about
+
+### Application download
+#### Android
+[Download](www.baidu.com)
+#### iOS
+> make by your self.
