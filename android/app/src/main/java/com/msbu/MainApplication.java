@@ -1,7 +1,6 @@
 package com.msbu;
 
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
@@ -16,7 +15,6 @@ public class MainApplication extends NavigationApplication {
 	@Nullable
 	@Override
 	public String getJSBundleFile() {
-		Log.e("codepush", CodePush.getJSBundleFile());
 		return CodePush.getJSBundleFile();
 	}
 
