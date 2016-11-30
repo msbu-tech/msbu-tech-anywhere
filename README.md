@@ -9,6 +9,11 @@
 #### iOS
 > make && install by your self.
 
+- `git clone https://github.com/msbu-tech/msbu-tech-anywhere.git`
+- `open msbu.xcworkspace with your xcode`
+- `click play button`
+- `have fun`
+
 ## Release 0.9.9
 - Native 0.9.9
 - React Native 0.9.9.1
