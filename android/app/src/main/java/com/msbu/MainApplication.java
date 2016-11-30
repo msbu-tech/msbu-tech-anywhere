@@ -6,11 +6,18 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.microsoft.codepush.react.CodePush;
 import com.facebook.react.ReactPackage;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends NavigationApplication {
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		CrashReport.initCrashReport(getApplicationContext(), BuildConfig.BUGLY_APP_ID, BuildConfig.DEBUG);
+	}
 
 	@Nullable
 	@Override

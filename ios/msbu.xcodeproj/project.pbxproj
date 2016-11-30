@@ -33,6 +33,7 @@
 		A8E57A8501D3438B9B75FD59 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F498EBFEAA644959D85A791 /* MaterialIcons.ttf */; };
 		C1972A76E3CF4716A4E62930 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D0BF1DFACBC41B6A7FA0A58 /* SimpleLineIcons.ttf */; };
 		C786322855FD49D5BD8DA79D /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 467BAC94117548CE881C5CAE /* EvilIcons.ttf */; };
+		DCBCB0950609F2EE2BD7272E /* Pods_msbu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0104F6FB14B7CCED4207969A /* Pods_msbu.framework */; };
 		DD691AFA268A4586A5CBC80E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA888726B84951B1CAB5F4 /* Zocial.ttf */; };
 		DFF60420C6C44FD0900F2462 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E4A6A4CAED4FD0836FF71F /* libCodePush.a */; };
 		FCA7ED8AA22E4FBD9EE7AD79 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A201A2E39C7944E1A139F2AF /* Ionicons.ttf */; };
@@ -198,6 +199,7 @@
 		00E356EE1AD99517003FC87E /* msbuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msbuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* msbuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = msbuTests.m; sourceTree = "<group>"; };
+		0104F6FB14B7CCED4207969A /* Pods_msbu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msbu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6722933B8F4DC8994C6375 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		2F498EBFEAA644959D85A791 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		39E4A6A4CAED4FD0836FF71F /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 		467BAC94117548CE881C5CAE /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		5CEA5C234A1F4AFF1CFF679E /* Pods-msbu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msbu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-msbu/Pods-msbu.debug.xcconfig"; sourceTree = "<group>"; };
 		639B37A2B0F14E779FAA11DA /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		6D0BF1DFACBC41B6A7FA0A58 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		73CA9A07E6844AF3B3F591F9 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 		A201A2E39C7944E1A139F2AF /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		B38DA4D1ADE14531B96EDFD5 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		BCCA888726B84951B1CAB5F4 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		C1D4BF7BB18D77E458085743 /* Pods-msbu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msbu.release.xcconfig"; path = "Pods/Target Support Files/Pods-msbu/Pods-msbu.release.xcconfig"; sourceTree = "<group>"; };
 		C6D91ED2DD2A40D596FC4A95 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D4A39F09C6604EC2A82E3341 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -255,6 +259,7 @@
 				3FF7A75845B649B4A4FB47FB /* libz.tbd in Frameworks */,
 				27BE6A84687F45CF8C259240 /* libReactNativeNavigation.a in Frameworks */,
 				695568F431F14004B5459B88 /* libRNVectorIcons.a in Frameworks */,
+				DCBCB0950609F2EE2BD7272E /* Pods_msbu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +413,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				DE15874A37B04410B838949A /* Frameworks */,
 				CE7F6014C8C84C7EBA79E08F /* Resources */,
+				D3705F723A31FEE157240836 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -462,10 +468,20 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		D3705F723A31FEE157240836 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CEA5C234A1F4AFF1CFF679E /* Pods-msbu.debug.xcconfig */,
+				C1D4BF7BB18D77E458085743 /* Pods-msbu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE15874A37B04410B838949A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C6D91ED2DD2A40D596FC4A95 /* libz.tbd */,
+				0104F6FB14B7CCED4207969A /* Pods_msbu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -495,10 +511,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "msbu" */;
 			buildPhases = (
+				897664BE9491B0F38C6EEAD9 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				72CC645E4E7F9D1BB3D2AB2A /* [CP] Embed Pods Frameworks */,
+				EEA834220F9DF1A1A984A48D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -786,6 +805,51 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		72CC645E4E7F9D1BB3D2AB2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-msbu/Pods-msbu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		897664BE9491B0F38C6EEAD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EEA834220F9DF1A1A984A48D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-msbu/Pods-msbu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -868,6 +932,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CEA5C234A1F4AFF1CFF679E /* Pods-msbu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODEPUSH_KEY = "r3SUdZP5B8wULX7pUJvyHI9-m-IyNy2JikJbz";
@@ -897,6 +962,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D4BF7BB18D77E458085743 /* Pods-msbu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODEPUSH_KEY = _LlixqfkiFWPawWuqSquVmF7OwngNy2JikJbz;
