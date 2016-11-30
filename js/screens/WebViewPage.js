@@ -13,6 +13,7 @@ import {
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
+const NAVIGATION_BAR_HEIGHT = 80;
 
 const returnButton = Platform.OS == 'ios' ? {
   leftButtons: [{
@@ -36,6 +37,14 @@ export default class WebViewPage extends Component {
     }
   }
 
+  _handleNavigationstateChange(info) {
+    if(info.title && info.url.indexOf(info.title) < 0) {
+      this.props.navigator.setTitle({
+        title: info.title
+      });
+    }
+  }
+
   renderError() {
     return (
       <View style={styles.container}>
@@ -56,7 +65,8 @@ export default class WebViewPage extends Component {
           javaScriptEnabled={true}
           domStorageEnabled={true}
           decelerationRate="normal"
-          source={{uri: this.props.link}}>
+          source={{uri: this.props.link}}
+          onNavigationStateChange={this._handleNavigationstateChange.bind(this)}>
 
         </WebView>
       </View>
@@ -80,6 +90,6 @@ const styles = StyleSheet.create({
   },
   webview: {
     width: SCREEN_WIDTH,
-    height: SCREEN_HEIGHT - 50
+    height: Platform.OS == 'ios' ? SCREEN_HEIGHT : SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT
   }
 });
