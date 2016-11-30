@@ -45,13 +45,10 @@ export default class WebViewPage extends Component {
   }
 
   render() {
-
-    console.log(this.props)
-
     return (
       <View style={styles.container}>
         <WebView
-          style={{width: SCREEN_WIDTH, height: SCREEN_HEIGHT}}
+          style={styles.webview}
           renderError={this.renderError.bind(this)}
           automaticallyAdjustContentInsets={true}
           mediaPlaybackRequiresUserAction={true}
@@ -80,5 +77,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     fontWeight: '500'
+  },
+  webview: {
+    width: SCREEN_WIDTH,
+    height: SCREEN_HEIGHT - 50
   }
 });

@@ -1,0 +1,6 @@
+framework module Pods_msbu {
+  umbrella header "Pods-msbu-umbrella.h"
+
+  export *
+  module * { export * }
+}

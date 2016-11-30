@@ -123,14 +123,17 @@ android {
         }
     }
     buildTypes {
+
         debug {
             applicationIdSuffix ".debug"
             buildConfigField "String", "CODEPUSH_KEY", '"ZHHAeu79mr1KJqwAVo99oQRjUcQZNy2JikJbz"'
+            buildConfigField "String", "BUGLY_APP_ID", '"1a317aea44"'
         }
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             buildConfigField "String", "CODEPUSH_KEY", '"R0ZZLULLklJnqOQdza_oCFwyRPbGNy2JikJbz"'
+            buildConfigField "String", "BUGLY_APP_ID", '"1a317aea44"'
             signingConfig signingConfigs.release
         }
     }
@@ -156,6 +159,7 @@ dependencies {
     compile project(':react-native-code-push')
     compile project(':react-native-navigation')
     compile project(':react-native-vector-icons')
+    compile 'com.tencent.bugly:crashreport:latest.release'
 }
 
 // Run this once to be able to run the application with BUCK
