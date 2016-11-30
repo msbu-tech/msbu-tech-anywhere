@@ -4,13 +4,16 @@
 
 ### Application download
 #### Android
+
 [Download](https://github.com/msbu-tech/msbu-tech-anywhere/releases/download/v0.9.9/msbu-tech-release.apk)
+
 ![Qr code](https://raw.githubusercontent.com/msbu-tech/msbu-tech-anywhere/master/qrcode/msbu-tech-android-v0.9.9.png)
 #### iOS
 > make && install by your self.
 
 - `git clone https://github.com/msbu-tech/msbu-tech-anywhere.git`
 - `open msbu.xcworkspace with your xcode`
+- `choose msbu-release scheme`
 - `click play button`
 - `have fun`
 
