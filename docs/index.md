@@ -6,7 +6,17 @@ layout: project
 
 msbu-tech-anywhere 是 MSBU Tech 官方 App，使用 ReactNative 实现。
 
-本项目还在开发中。
+## 安装
+
+### Android
+
+[__Download__](https://github.com/msbu-tech/msbu-tech-anywhere/releases/download/v0.9.9/msbu-tech-release.apk)
+
+![](https://raw.githubusercontent.com/msbu-tech/msbu-tech-anywhere/master/qrcode/msbu-tech-android-v0.9.9.png)
+
+### iOS
+
+* make && install by yourself.
 
 ## 问题反馈
 
